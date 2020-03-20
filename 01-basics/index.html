@@ -7,20 +7,30 @@
     <script src="tooltip.js"></script>
     <script src="confirm-link.js"></script>
     <style>
-      div {
-        border: 2px solid orange;
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-primary: lightblue;
+      }
+
+      html {
+        font-family: sans-serif;
       }
     </style>
   </head>
   <body>
     <p>
-      <uc-tooltip text="Web Components is a set of standards."
-        >Web Components</uc-tooltip
+      <uc-tooltip
+        class="important"
+        text="Web Components is a set of standards."
       >
+        <span class="highlight">Web Components</span>
+      </uc-tooltip>
       are awesome
     </p>
     <uc-tooltip></uc-tooltip>
-    <div>This does not get the web component styles!</div>
     <a is="uc-confirm-link" href="https://google.com">Google</a>
   </body>
 </html>
